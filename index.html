@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> P. Lohithaksha — Data Scientist & Quantitative Analyst | Open to Work</title>
+  <meta name="description" content="Portfolio of P. Lohithaksha, a Data Scientist specializing in machine learning, statistical modeling, time-series forecasting and financial analytics. Currently open to new opportunities." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..700;1,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="portfolio/css/style.css" />
+  <style>
+    .open-to-work-badge{
+      display:inline-flex;align-items:center;gap:.5rem;
+      padding:.35rem .8rem;border-radius:999px;
+      border:1px solid rgba(16,185,129,.5);
+      background:rgba(16,185,129,.08);
+      color:#10b981;font-size:.72rem;letter-spacing:.06em;
+      margin-left:.85rem;
+    }
+    .open-to-work-badge .pulse-dot{background:#10b981;}
+    @media (max-width:991px){
+      .open-to-work-badge{margin-left:0;margin-top:.5rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader" data-testid="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-label mono">// INITIALIZING QUANT_LAB v2.6</div>
+      <div class="preloader-count" id="preloader-count">000</div>
+      <div class="preloader-bar"><span id="preloader-fill"></span></div>
+      <div class="preloader-log mono" id="preloader-log">loading kernels…</div>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top quant-nav" id="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand nav-logo" href="#hero" data-testid="nav-logo" data-hover>
+        LOHITHAKSHA<span class="text-cyan">.DS</span><span class="logo-cursor">_</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation" data-testid="nav-toggle">
+        <span class="toggler-line"></span><span class="toggler-line"></span><span class="toggler-line"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link mono" href="#about" data-testid="nav-link-about" data-hover><span class="nav-num">01</span>ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#experience" data-testid="nav-link-experience" data-hover><span class="nav-num">02</span>EXPERIENCE</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#projects" data-testid="nav-link-projects" data-hover><span class="nav-num">03</span>PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#skills" data-testid="nav-link-skills" data-hover><span class="nav-num">04</span>SKILLS</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#certifications" data-testid="nav-link-certifications" data-hover><span class="nav-num">05</span>CERTS</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#education" data-testid="nav-link-education" data-hover><span class="nav-num">06</span>EDUCATION</a></li>
+          <li class="nav-item"><a class="nav-link mono" href="#contact" data-testid="nav-link-contact" data-hover><span class="nav-num">07</span>CONTACT</a></li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a class="btn-quant btn-quant-sm" href="portfolio/Lohithaksha_P.pdf" download="P_Lohithaksha_Resume.pdf" data-testid="nav-resume-button" data-hover>RÉSUMÉ <i class="fa-solid fa-arrow-down"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="hero" class="hero" data-testid="hero-section">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-11">
+          <div class="hero-meta mono" data-hero-fade>
+            <span class="pulse-dot"></span> SYS.ONLINE — DATA SCIENTIST / FINANCIAL ANALYTICS / ML
+            <span class="open-to-work-badge mono" data-testid="open-to-work-badge">
+              <span class="pulse-dot"></span> OPEN TO WORK
+            </span>
+          </div>
+          <h1 class="hero-title" data-testid="hero-headline">
+            <span class="line"><span class="line-inner">TURNING NOISY</span></span>
+            <span class="line"><span class="line-inner text-outline">MARKET SIGNALS</span></span>
+            <span class="line"><span class="line-inner">INTO <span class="text-cyan">PREDICTIONS.</span></span></span>
+          </h1>
+          <p class="hero-sub" data-hero-fade>
+            I'm <strong> P. Lohithaksha </strong> — a Data Scientist with 2+ years building time-series forecasting and
+            fraud-detection models at <strong>Raymond James</strong>. I engineer features, stress-test models,
+            and ship data-driven decisions with Python &amp; SQL. <strong class="text-emerald">Currently open to new
+            Data Science / ML opportunities</strong> — let's talk.
+          </p>
+          <div class="hero-cta" data-hero-fade>
+            <a href="#projects" class="btn-quant" data-testid="hero-explore-button" data-hover>EXPLORE ALGORITHMS <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="portfolio/Lohithaksha_P.pdf" download="P_Lohithaksha_Resume.pdf" class="btn-quant btn-quant-ghost" data-testid="hero-resume-button" data-hover>HIRE ME<i class="fa-solid fa-paper-plane"></i></a>
+          </div>
+          <div class="hero-ticker mono" data-hero-fade data-testid="hero-ticker">
+            <span class="text-emerald"></span><span>PYTHON</span><span>SQL</span><span>XGBOOST</span><span>ARIMA / GARCH</span><span class="text-emerald">▲ +18% FORECAST ACCURACY</span><span class="text-cyan">▼ −15% FALSE POSITIVES</span><span>TABLEAU</span><span>AZURE / AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint mono" data-hover aria-label="Scroll to about section">
+      SCROLL <span class="scroll-line"><span></span></span> 01
+    </a>
+  </header>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee" aria-hidden="true" data-testid="marquee">
+    <div class="marquee-track">
+      <span>OPEN TO WORK <em>•</em> MACHINE LEARNING <em>•</em> TIME-SERIES FORECASTING <em>•</em> FRAUD DETECTION <em>•</em> FEATURE ENGINEERING <em>•</em> FINANCIAL ANALYTICS <em>•</em> NLP <em>•</em> STATISTICAL MODELING <em>•</em>&nbsp;</span>
+      <span>OPEN TO WORK <em>•</em> MACHINE LEARNING <em>•</em> TIME-SERIES FORECASTING <em>•</em> FRAUD DETECTION <em>•</em> FEATURE ENGINEERING <em>•</em> FINANCIAL ANALYTICS <em>•</em> NLP <em>•</em> STATISTICAL MODELING <em>•</em>&nbsp;</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== 01 ABOUT ===== -->
+    <section id="about" class="section" data-testid="about-section">
+      <div class="container">
+        <div class="chapter mono" data-reveal><span class="chapter-num">01</span><span class="chapter-line"></span>ABOUT MATRIX</div>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-reveal>
+            <div class="portrait-frame" data-hover>
+              <img src="https://images.unsplash.com/photo-1607693965623-01021a7aee54?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Portrait of Rahul, Data Scientist" loading="lazy" data-testid="about-portrait" />
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div><div class="frame-corner bl"></div><div class="frame-corner br"></div>
+              <div class="portrait-tag mono">SUBJECT: P. LOHITHAKSHA // ROLE: DATA_SCIENTIST // STATUS: OPEN_TO_WORK</div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="section-title" data-reveal>Data, <span class="text-cyan">distilled</span> into decisions.</h2>
+            <p class="section-text" data-reveal>
+              Data Scientist with 2+ years of experience specializing in machine learning, statistical modeling,
+              and financial analytics. I build predictive models for time-series forecasting and fraud detection
+              using Python and SQL — with a strong focus on feature engineering, rigorous model evaluation, and
+              delivering measurable business impact through data-driven insights. I'm currently exploring new
+              full-time Data Science / ML Engineering opportunities where I can bring that same rigor.
+            </p>
+            <div class="row g-3 mt-2" data-reveal-group>
+              <div class="col-6 col-md-3"><div class="stat-cell"><div class="stat-num"><span class="counter" data-target="2">0</span>+</div><div class="stat-label mono">YEARS EXPERIENCE</div></div></div>
+              <div class="col-6 col-md-3"><div class="stat-cell"><div class="stat-num text-emerald">+<span class="counter" data-target="18">0</span>%</div><div class="stat-label mono">FORECAST ACCURACY</div></div></div>
+              <div class="col-6 col-md-3"><div class="stat-cell"><div class="stat-num text-cyan">−<span class="counter" data-target="15">0</span>%</div><div class="stat-label mono">FALSE POSITIVES</div></div></div>
+              <div class="col-6 col-md-3"><div class="stat-cell"><div class="stat-num"><span class="counter" data-target="5">0</span></div><div class="stat-label mono">CERTIFICATIONS</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 EXPERIENCE ===== -->
+    <section id="experience" class="section section-alt" data-testid="experience-section">
+      <div class="container">
+        <div class="chapter mono" data-reveal><span class="chapter-num">02</span><span class="chapter-line"></span>QUANT EXPERIENCE</div>
+        <h2 class="section-title mb-5" data-reveal>Where the models <span class="text-cyan">met the market.</span></h2>
+        <div class="timeline" id="timeline">
+          <div class="timeline-rail" aria-hidden="true"><span class="timeline-progress" id="timeline-progress"></span></div>
+
+          <article class="timeline-item" data-reveal data-testid="experience-card-raymond-james">
+            <div class="timeline-node"></div>
+            <div class="exp-card" data-hover>
+              <div class="exp-head">
+                <div>
+                  <h3 class="exp-role">Data Scientist</h3>
+                  <div class="exp-company text-cyan">Raymond James</div>
+                </div>
+                <div class="exp-meta mono">FEB 2024 — MAR 2026<br />FLORIDA, USA</div>
+              </div>
+              <ul class="exp-list">
+                <li>Designed and deployed financial time-series forecasting models (ARIMA, GARCH, Exponential Smoothing), improving portfolio return predictions by <strong class="text-emerald">18%</strong>.</li>
+                <li>Developed fraud detection models on imbalanced datasets using Logistic Regression, Random Forest and XGBoost, reducing false positives by <strong class="text-emerald">15%</strong>.</li>
+                <li>Built feature engineering pipelines and ran model evaluation with ROC-AUC, PR curves and cross-validation to harden model robustness.</li>
+                <li>Contributed to deployment and monitoring of ML models in production — tracking stability and detecting drift across financial datasets.</li>
+                <li>Applied anomaly detection techniques to surface unusual financial transaction patterns.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">ARIMA / GARCH</span><span class="tag">XGBoost</span><span class="tag">Scikit-learn</span><span class="tag">ROC-AUC</span><span class="tag">Model Monitoring</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-reveal data-testid="experience-card-unical">
+            <div class="timeline-node"></div>
+            <div class="exp-card" data-hover>
+              <div class="exp-head">
+                <div>
+                  <h3 class="exp-role">Data Analyst Intern</h3>
+                  <div class="exp-company text-cyan">Unical Systems</div>
+                </div>
+                <div class="exp-meta mono">AUG 2021 — DEC 2021<br />HYDERABAD, IN</div>
+              </div>
+              <ul class="exp-list">
+                <li>Partnered with business teams to define KPIs and deliver actionable insights that improved marketing decision-making.</li>
+                <li>Performed data cleaning, transformation and analysis on structured and unstructured datasets using SQL and Python.</li>
+                <li>Designed and maintained interactive Tableau dashboards for executive reporting and customer behavior analysis.</li>
+                <li>Optimized SQL Server databases and supported efficient querying for analytics and reporting.</li>
+                <li>Applied NLP techniques (tokenization, stop-word removal, lemmatization) to analyze customer feedback and reviews.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python</span><span class="tag">SQL Server</span><span class="tag">Tableau</span><span class="tag">Pandas</span><span class="tag">NLP</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 03 PROJECTS ===== -->
+    <section id="projects" class="section" data-testid="projects-section">
+      <div class="container">
+        <div class="chapter mono" data-reveal><span class="chapter-num">03</span><span class="chapter-line"></span>ALGORITHMIC PROJECTS</div>
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5 gap-3">
+          <h2 class="section-title mb-0" data-reveal>Selected <span class="text-cyan">experiments.</span></h2>
+          <div class="mono text-muted-custom" data-reveal>// HOVER TO INSPECT</div>
+        </div>
+        <div class="row g-4" data-reveal-group>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card" data-testid="project-card-proj-1" data-hover>
+              <div class="project-media">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Financial time-series forecasting charts" loading="lazy" />
+                <div class="project-index mono">P—01</div>
+              </div>
+              <div class="project-body">
+                <div class="project-cat mono">TIME-SERIES / FINANCE</div>
+                <h3 class="project-title">Financial Return Forecaster</h3>
+                <p class="project-desc">Ensemble of ARIMA, GARCH and Exponential Smoothing models forecasting portfolio returns, with drift monitoring and rolling cross-validation.</p>
+                <div class="project-metrics mono"><span class="text-emerald">+18% PREDICTION ACCURACY</span><span>ROC-AUC TUNED</span></div>
+                <div class="tag-row"><span class="tag">Python</span><span class="tag">ARIMA</span><span class="tag">GARCH</span><span class="tag">Pandas</span></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card" data-testid="project-card-proj-2" data-hover>
+              <div class="project-media">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Fraud detection analytics dashboard" loading="lazy" />
+                <div class="project-index mono">P—02</div>
+              </div>
+              <div class="project-body">
+                <div class="project-cat mono">CLASSIFICATION / RISK</div>
+                <h3 class="project-title">Fraud Detection Engine</h3>
+                <p class="project-desc">Logistic Regression, Random Forest and XGBoost on heavily imbalanced transaction data, evaluated with PR curves and cost-aware thresholds.</p>
+                <div class="project-metrics mono"><span class="text-cyan">−15% FALSE POSITIVES</span><span>IMBALANCED LEARNING</span></div>
+                <div class="tag-row"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Scikit-learn</span><span class="tag">SQL</span></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card" data-testid="project-card-proj-3" data-hover>
+              <div class="project-media">
+                <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&q=85" alt="NLP customer feedback visualization" loading="lazy" />
+                <div class="project-index mono">P—03</div>
+              </div>
+              <div class="project-body">
+                <div class="project-cat mono">NLP / BI ANALYTICS</div>
+                <h3 class="project-title">Customer Voice Analytics</h3>
+                <p class="project-desc">NLP pipeline (tokenization, stop-word removal, lemmatization) over customer reviews, feeding interactive Tableau dashboards for executives.</p>
+                <div class="project-metrics mono"><span class="text-emerald">EXECUTIVE REPORTING</span><span>TEXT MINING</span></div>
+                <div class="tag-row"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Tableau</span><span class="tag">SQL</span></div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 SKILLS ===== -->
+    <section id="skills" class="section section-alt" data-testid="skills-section">
+      <div class="container">
+        <div class="chapter mono" data-reveal><span class="chapter-num">04</span><span class="chapter-line"></span>SKILLS &amp; TECH SPECTRUM</div>
+        <h2 class="section-title mb-5" data-reveal>The <span class="text-cyan">instrument</span> panel.</h2>
+        <div class="row g-4 mb-5" data-reveal-group>
+          <div class="col-lg-4">
+            <div class="skill-panel" data-hover>
+              <div class="skill-panel-title mono"><i class="fa-solid fa-code text-cyan"></i> LANGUAGES &amp; DATA</div>
+              <div class="skill" data-testid="skill-python"><div class="skill-head mono"><span>PYTHON</span><span class="skill-pct" data-level="95">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="95"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>SQL</span><span class="skill-pct" data-level="92">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="92"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>PYSPARK</span><span class="skill-pct" data-level="80">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="80"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>JAVA</span><span class="skill-pct" data-level="70">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="70"></span></div></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="skill-panel" data-hover>
+              <div class="skill-panel-title mono"><i class="fa-solid fa-brain text-cyan"></i> ML &amp; ANALYTICS</div>
+              <div class="skill"><div class="skill-head mono"><span>SCIKIT-LEARN / XGBOOST</span><span class="skill-pct" data-level="92">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="92"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>TIME-SERIES (ARIMA/GARCH)</span><span class="skill-pct" data-level="88">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="88"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>STATISTICS / A-B TESTING</span><span class="skill-pct" data-level="85">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="85"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>NLP</span><span class="skill-pct" data-level="78">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="78"></span></div></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="skill-panel" data-hover>
+              <div class="skill-panel-title mono"><i class="fa-solid fa-cloud text-cyan"></i> VIZ &amp; CLOUD</div>
+              <div class="skill"><div class="skill-head mono"><span>TABLEAU / POWER BI</span><span class="skill-pct" data-level="90">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="90"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>PLOTLY / SEABORN</span><span class="skill-pct" data-level="85">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="85"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>AZURE / AWS</span><span class="skill-pct" data-level="80">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="80"></span></div></div>
+              <div class="skill"><div class="skill-head mono"><span>AZURE DEVOPS / GIT</span><span class="skill-pct" data-level="82">0%</span></div><div class="skill-track"><span class="skill-fill" data-level="82"></span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="chip-cloud" data-reveal data-testid="skill-chip-cloud">
+          <span class="chip">Hive</span><span class="chip">Impala</span><span class="chip">Sqoop</span><span class="chip">Spark SQL</span><span class="chip">MySQL</span><span class="chip">Oracle</span><span class="chip">Azure Data Lake Gen2</span><span class="chip">K-Means</span><span class="chip">DBSCAN</span><span class="chip">Random Forest</span><span class="chip">Logistic Regression</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Hypothesis Testing</span><span class="chip">ROC-AUC</span><span class="chip">GitHub</span><span class="chip">Anaconda Enterprise</span><span class="chip">JIRA</span><span class="chip">Agile / Scrum</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 05 CERTIFICATIONS ===== -->
+    <section id="certifications" class="section" data-testid="certifications-section">
+      <div class="container">
+        <div class="chapter mono" data-reveal><span class="chapter-num">05</span><span class="chapter-line"></span>CERTIFICATIONS &amp; CREDENTIALS</div>
+        <h2 class="section-title mb-5" data-reveal>Verified <span class="text-cyan">signal.</span></h2>
+        <div class="cert-list" data-reveal-group>
+          <div class="cert-row" data-hover data-testid="cert-aws-ai"><span class="cert-idx mono">C—01</span><span class="cert-name">AWS AI Practitioner</span><span class="cert-issuer mono">AMAZON WEB SERVICES</span><i class="fa-solid fa-certificate cert-icon"></i></div>
+          <div class="cert-row" data-hover data-testid="cert-aws-cloud"><span class="cert-idx mono">C—02</span><span class="cert-name">AWS Cloud Practitioner</span><span class="cert-issuer mono">AMAZON WEB SERVICES</span><i class="fa-solid fa-certificate cert-icon"></i></div>
+          <div class="cert-row" data-hover data-testid="cert-kpmg"><span class="cert-idx mono">C—03</span><span class="cert-name">KPMG Data Science Pro-Degree</span><span class="cert-issuer mono">KPMG</span><i class="fa-solid fa-certificate cert-icon"></i></div>
+          <div class="cert-row" data-hover data-testid="cert-ms-db"><span class="cert-idx mono">C—04</span><span class="cert-name">Microsoft Database Fundamentals</span><span class="cert-issuer mono">MICROSOFT</span><i class="fa-solid fa-certificate cert-icon"></i></div>
+          <div class="cert-row" data-hover data-testid="cert-genai"><span class="cert-idx mono">C—05</span><span class="cert-name">PGP in Data Science &amp; Analytics with GenAI</span><span class="cert-issuer mono">IMARTICUS LEARNING</span><i class="fa-solid fa-certificate cert-icon"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 06 EDUCATION ===== -->
+    <section id="education" class="section section-alt" data-testid="education-section">
+      <div class="container">
+        <div class="chapter mono" data-reveal><span class="chapter-num">06</span><span class="chapter-line"></span>ACADEMIC FOUNDATION</div>
+        <h2 class="section-title mb-5" data-reveal>Trained on <span class="text-cyan">theory.</span></h2>
+        <div class="row g-4" data-reveal-group>
+          <div class="col-md-6">
+            <div class="edu-card" data-hover data-testid="education-card-lamar">
+              <div class="edu-period mono">AUG 2022 — DEC 2023</div>
+              <h3 class="edu-degree">M.S. Computer Science</h3>
+              <div class="edu-school text-cyan">Lamar University</div>
+              <div class="edu-loc mono">TEXAS, USA</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="edu-card" data-hover data-testid="education-card-imarticus">
+              <div class="edu-period mono">DEC 2025 — AUG 2026</div>
+              <h3 class="edu-degree">PGP Data Science &amp; Analytics with GenAI</h3>
+              <div class="edu-school text-cyan">Imarticus Learning</div>
+              <div class="edu-loc mono">HYDERABAD, IN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 07 CONTACT ===== -->
+    <section id="contact" class="section" data-testid="contact-section">
+      <div class="container">
+        <div class="chapter mono" data-reveal><span class="chapter-num">07</span><span class="chapter-line"></span>INITIATE TRANSMISSION</div>
+        <div class="row g-5">
+          <div class="col-lg-5" data-reveal>
+            <h2 class="section-title">Open a <span class="text-cyan">channel.</span></h2>
+            <p class="section-text">Have a dataset that refuses to behave, a model that won't converge, or a role that needs a data scientist? Transmit a message — response latency is low.</p>
+            <div class="contact-meta mono">
+              <div class="contact-meta-row"><i class="fa-solid fa-at text-cyan"></i> pnlohithaksha99@gmail.com</div>
+              <div class="contact-meta-row"><i class="fa-solid fa-phone text-cyan"></i> +91 72078 09767</div>
+<div class="contact-meta-row socials">
+  <a href="mailto:pnlohithaksha99@gmail.com"
+     aria-label="Email"
+     data-testid="social-email"
+     data-hover>
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/pn-0a5495360"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="LinkedIn"
+     data-testid="social-linkedin"
+     data-hover>
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+  <a href="https://github.com/lohithaksha"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="GitHub"
+     data-testid="social-github"
+     data-hover>
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <a href="https://medium.com/@lohit349"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Medium"
+     data-testid="social-medium"
+     data-hover>
+    <i class="fa-brands fa-medium"></i>
+  </a>
+</div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-reveal>
+            <form id="contact-form" class="contact-form" novalidate data-testid="contact-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="cf-name" class="form-label mono">IDENTIFIER / NAME</label>
+                  <input type="text" class="form-control" id="cf-name" name="name" placeholder="Jane Analyst" data-testid="contact-input-name" />
+                  <div class="field-error mono" id="err-name"></div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cf-email" class="form-label mono">TRANSMISSION ADDRESS / EMAIL</label>
+                  <input type="email" class="form-control" id="cf-email" name="email" placeholder="jane@company.com" data-testid="contact-input-email" />
+                  <div class="field-error mono" id="err-email"></div>
+                </div>
+                <div class="col-12">
+                  <label for="cf-subject" class="form-label mono">SIGNAL SUBJECT</label>
+                  <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Forecasting engagement" data-testid="contact-input-subject" />
+                  <div class="field-error mono" id="err-subject"></div>
+                </div>
+                <div class="col-12">
+                  <label for="cf-message" class="form-label mono">ENCRYPTED MESSAGE</label>
+                  <textarea class="form-control" id="cf-message" name="message" rows="5" placeholder="Describe the problem, the data, and the goal…" data-testid="contact-input-message"></textarea>
+                  <div class="field-error mono" id="err-message"></div>
+                </div>
+                <div class="col-12 d-flex align-items-center gap-3 flex-wrap">
+                  <button type="submit" class="btn-quant" id="cf-submit" data-testid="contact-submit-button" data-hover>
+                    <span class="btn-label">TRANSMIT MESSAGE</span> <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                  <div class="form-status mono" id="form-status" data-testid="form-status" role="status" aria-live="polite"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="mono footer-brand">LOHITHAKSHA<span class="text-cyan">.DS</span> — © <span id="footer-year">2026</span> — <span class="text-emerald">OPEN TO WORK</span></div>
+      <a href="#hero" class="mono footer-top" data-hover data-testid="back-to-top">BACK TO TOP <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="portfolio/js/main.js"></script>
+</body>
+</html>

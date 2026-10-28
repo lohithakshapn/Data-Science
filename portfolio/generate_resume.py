@@ -44,7 +44,7 @@ MEDIUM_URL = "https://medium.com/@lohit349"
 # ============================================================ 
  
 SUMMARY = ( 
-    "Data Scientist with 2+ years of experience specializing in machine learning, " 
+    "Data Scientist with 3+ years of experience specializing in machine learning, " 
     "statistical modeling, and financial analytics. Experienced in building predictive " 
     "models for time-series forecasting and fraud detection using Python and SQL. Strong " 
     "focus on feature engineering, model evaluation, and delivering business impact " 

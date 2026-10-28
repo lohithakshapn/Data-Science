@@ -310,49 +310,48 @@
       submitBtn.classList.add('is-sending');
       submitBtn.querySelector('.btn-label').textContent = 'TRANSMITTING…';
 
-fetch('https://formspree.io/f/xnpayapl', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-  },
-  body: JSON.stringify({
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    subject: form.subject.value.trim(),
-    message: form.message.value.trim()
-  })
-})
-.then(async function (res) {
-  const data = await res.json().catch(() => ({}));
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+          subject: form.subject.value.trim(),
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim(),
+          botcheck: ''
+        })
+      })
+      .then(async function (res) {
+        const data = await res.json().catch(() => ({}));
 
-  if (!res.ok) {
-    console.error('Formspree error:', res.status, data);
-    throw new Error(
-      data.error ||
-      (data.errors || []).map(e => e.message).join(', ') ||
-      'HTTP ' + res.status
-    );
-  }
+        if (!res.ok || data.success !== true) {
+          console.error('Web3Forms error:', res.status, data);
+          throw new Error(
+            data.message || 'Submission failed (HTTP ' + res.status + ')'
+          );
+        }
 
-  status.textContent = '// SIGNAL RECEIVED — MESSAGE SUBMITTED';
-  status.classList.remove('error');
-  form.reset();
+        status.textContent = '// SIGNAL RECEIVED — MESSAGE SENT SUCCESSFULLY';
+        status.classList.remove('error');
 
-  form.querySelectorAll('.form-control').forEach(function (c) {
-    c.classList.remove('is-valid', 'is-invalid');
-  });
-})
-.catch(function (err) {
-  console.error('Contact form failed:', err);
-  status.textContent = '// UPLINK FAILED — ' + err.message;
-  status.classList.add('error');
-})
-.finally(function () {
-  submitBtn.classList.remove('is-sending');
-  submitBtn.querySelector('.btn-label').textContent =
-    'TRANSMIT MESSAGE';
-});
+        form.reset();
+        form.querySelectorAll('.form-control').forEach(function (c) {
+          c.classList.remove('is-valid', 'is-invalid');
+        });
+      })
+      .catch(function (err) {
+        console.error('Contact form error:', err);
+        status.textContent = '// UPLINK FAILED — ' + err.message;
+        status.classList.add('error');
+      })
+      .finally(function () {
+        submitBtn.classList.remove('is-sending');
+        submitBtn.querySelector('.btn-label').textContent = 'TRANSMIT MESSAGE';
+      });
     });
   }
 })();

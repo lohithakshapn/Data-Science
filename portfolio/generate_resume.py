@@ -66,9 +66,9 @@ EXPERIENCE = [
         ], 
     }, 
     { 
-        "role": "Data Analyst Intern", 
+        "role": "Data Analyst", 
         "company": "Unical Systems — Hyderabad, IN", 
-        "period": "Aug 2021 – Dec 2021", 
+        "period": "Aug 2021 – Jul 2022", 
         "bullets": [ 
             "Partnered with business teams to define KPIs and deliver actionable insights to improve marketing decision-making.", 
             "Performed data cleaning, transformation, and analysis on structured and unstructured datasets using SQL and Python.", 

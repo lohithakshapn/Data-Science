@@ -310,7 +310,7 @@
       submitBtn.classList.add('is-sending');
       submitBtn.querySelector('.btn-label').textContent = 'TRANSMITTING…';
 
-      fetch('https://formspree.io/f/xnpayapl', {
+      fetch('https://formspree.io/f/mjyywnjk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
